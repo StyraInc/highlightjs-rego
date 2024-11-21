@@ -1,12 +1,18 @@
 # highlightjs-rego
 
-[highlight.js](https://highlightjs.org/) syntax highlighting for
-[Rego](https://www.openpolicyagent.org/docs/latest/policy-language).
+[highlight.js](https://highlightjs.org/) syntax highlighting for the
+[Rego](https://www.openpolicyagent.org/docs/latest/policy-language) language of Open Policy Agent (OPA).
 
 # How to build
 
 1. Clone the highlight.js repository
+   ```
+   git clone https://github.com/highlightjs/highlight.js.git
+   ```
 2. Clone this repository
+    ```
+    git clone https://github.com/StyraInc/highlightjs-rego.git
+    ```
 3. In the `extra` directory of the highlight.js repository, create a symlink to this repository
     ```shell
     ln -s /path/to/highlightjs-rego /path/to/highlight.js/extra/highlightjs-rego
