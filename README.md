@@ -3,7 +3,12 @@
 [highlight.js](https://highlightjs.org/) syntax highlighting for the
 [Rego](https://www.openpolicyagent.org/docs/latest/policy-language) language of Open Policy Agent (OPA).
 
+![Screenshot](assets/highlight-rego.png)
+
 # How to build
+
+Building from source can either be done by running the `build.sh` script in this repository, or manually
+following the steps below.
 
 1. Clone the highlight.js repository
    ```
