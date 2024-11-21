@@ -5,7 +5,7 @@ set -e
 rm -rf build dist
 
 git clone https://github.com/highlightjs/highlight.js.git build/highlight.js
-git clone https://github.com/StyraInc/highlightjs-rego.git build/highlightjs-rego
+git clone "${PWD}" build/highlightjs-rego
 
 ln -s "${PWD}"/build/highlightjs-rego build/highlight.js/extra/highlightjs-rego
 
