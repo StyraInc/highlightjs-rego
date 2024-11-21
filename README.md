@@ -8,7 +8,8 @@
 ## How to use
 
 Head over to the [releases](https://github.com/StyraInc/highlightjs-rego/releases) page and grab the minified version of
-the Rego syntax definition file (`rego.min.js` or `rego.es.min.js`). Include it in your HTML file:
+the Rego syntax definition file (`rego.min.js` or `rego.es.min.js`). Include it in your HTML file, and use the
+`language-rego` class for the `<code>` block you want to highlight:
 
 ```html
 <!DOCTYPE html>
