@@ -64,3 +64,8 @@ following the steps below.
 
 More detailed instructions for building 3rd party language support for highlight.js can be found
 [here](https://github.com/highlightjs/highlight.js/blob/main/extra/3RD_PARTY_QUICK_START.md#packaging).
+
+## Community
+
+For questions, discussions and announcements related to Styra products, services and open source projects, please join
+the Styra community on [Slack](https://communityinviter.com/apps/styracommunity/signup)!
