@@ -1,0 +1,31 @@
+name: GitHub Release
+
+on:
+  workflow_trigger: {}
+  push:
+    tags:        
+      - '**'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write #  to create release (softprops/action-gh-release)
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: 22
+
+      - name: Build
+        run: ./build.sh
+
+      - name: Create @styra/opa GH release
+        uses: softprops/action-gh-release@e7a8f85e1c67a31e6ed99a94b41bd0b71bbee6b8 # v2.0.9
+        with:
+          files: |
+            dist/rego.min.js
+            dist/rego.es.min.js
