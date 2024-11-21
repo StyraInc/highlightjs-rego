@@ -9,10 +9,8 @@ git clone https://github.com/StyraInc/highlightjs-rego.git build/highlightjs-reg
 
 ln -s "${PWD}"/build/highlightjs-rego build/highlight.js/extra/highlightjs-rego
 
-(
-    cd build/highlight.js &&
-    npm install &&
-    node ./tools/build.js -t cdn &&
-    cd ../.. &&
-    cp -r build/highlightjs-rego/dist ./
-)
+cd build/highlight.js
+npm ci
+node ./tools/build.js -t cdn
+cd ../..
+cp -r build/highlightjs-rego/dist ./
