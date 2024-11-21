@@ -1,7 +1,6 @@
 name: GitHub Release
 
 on:
-  workflow_trigger: {}
   push:
     tags:        
       - '**'
