@@ -5,7 +5,40 @@
 
 ![Screenshot](assets/highlight-rego.png)
 
-# How to build
+## How to use
+
+Head over to the [releases](https://github.com/StyraInc/highlightjs-rego/releases) page and grab the minified version of
+the Rego syntax definition file (`rego.min.js` or `rego.es.min.js`). Include it in your HTML file:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Highlight.js Rego Demo</title>
+  <link rel="stylesheet" href="path/to/theme.css">
+  <script type="text/javascript" src="path/to/highlight.min.js"></script>
+  <script type="text/javascript" src="path/to/rego.min.js"></script>
+  <script type="text/javascript">hljs.highlightAll();</script>
+</head>
+
+<body>
+  <pre><code class="language-rego">
+# METADATA
+# description: Your Rego policy here!
+package policy
+
+default allow := false
+
+allow if {
+    # ..conditions..
+}
+  </code></pre>
+</body>
+
+</html>
+```
+
+## How to build
 
 Building from source can either be done by running the `build.sh` script in this repository, or manually
 following the steps below.
