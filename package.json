@@ -1,0 +1,28 @@
+{
+  "name": "highlightjs-rego",
+  "version": "0.1.0",
+  "description": "Rego policy language syntax highlighting plugin for highlight.js",
+  "main": "src/rego/rego.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anderseknert/highlightjs-rego.git"
+  },
+  "keywords": [
+    "rego",
+    "opa",
+    "policy",
+    "pac"
+  ],
+  "author": "Anders Eknert",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/anderseknert/highlightjs-rego(issues"
+  },
+  "homepage": "https://github.com/anderseknert/highlightjs-rego",
+  "devDependencies": {
+    "highlight.js": "^11.9.0"
+  }
+}
