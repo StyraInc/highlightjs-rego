@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: ./build.sh
 
-      - name: Create @styra/opa GH release
+      - name: Create GH release
         uses: softprops/action-gh-release@e7a8f85e1c67a31e6ed99a94b41bd0b71bbee6b8 # v2.0.9
         with:
           files: |
