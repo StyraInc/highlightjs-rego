@@ -8,20 +8,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anderseknert/highlightjs-rego.git"
+    "url": "git+https://github.com/StyraInc/highlightjs-rego.git"
   },
   "keywords": [
     "rego",
-    "opa",
     "policy",
-    "pac"
+    "pac",
+    "policy as code",
+    "OPA",
+    "Open Policy Agent",
+    "authorization",
+    "permissions"
   ],
   "author": "Anders Eknert",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/anderseknert/highlightjs-rego/issues"
+    "url": "https://github.com/StyraInc/highlightjs-rego/issues"
   },
-  "homepage": "https://github.com/anderseknert/highlightjs-rego",
+  "homepage": "https://github.com/StyraInc/highlightjs-rego",
   "devDependencies": {
     "highlight.js": "^11.9.0"
   }
