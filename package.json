@@ -1,6 +1,6 @@
 {
   "name": "@styra/highlightjs-rego",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Rego policy language syntax highlighting plugin for highlight.js",
   "main": "src/rego/rego.js",
   "files": [
