@@ -2,8 +2,8 @@ name: GitHub Release
 
 on:
   push:
-    tags:        
-      - '**'
+    branches:
+      - main
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -12,19 +12,20 @@ jobs:
     name: Release
     runs-on: ubuntu-22.04
     permissions:
-      contents: write #  to create release (softprops/action-gh-release)
+      contents: write #  to create release (changesets/action)
+      actions: write #  to create tags (changesets/action)
+      issues: write # to post issue comments (changesets/action)
+      pull-requests: write #  to create pull request (changesets/action)
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: 22
-
-      - name: Build
-        run: ./build.sh
-
-      - name: Create GH release
-        uses: softprops/action-gh-release@e7a8f85e1c67a31e6ed99a94b41bd0b71bbee6b8 # v2.0.9
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: StyraInc/changesets-action@aba318e9165b45b7948c60273e0b72fce0a64eb9 # v1.4.7
         with:
-          files: |
-            dist/rego.min.js
-            dist/rego.es.min.js
+          publish: npm run publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

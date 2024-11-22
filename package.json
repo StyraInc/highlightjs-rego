@@ -1,10 +1,14 @@
 {
-  "name": "highlightjs-rego",
+  "name": "@styra/highlightjs-rego",
   "version": "0.1.0",
   "description": "Rego policy language syntax highlighting plugin for highlight.js",
   "main": "src/rego/rego.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "publish": "./build.sh && changeset publish"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,7 @@
   },
   "homepage": "https://github.com/StyraInc/highlightjs-rego",
   "devDependencies": {
+    "@changesets/cli": "^2.27.10",
     "highlight.js": "^11.9.0"
   }
 }
