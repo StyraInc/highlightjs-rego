@@ -14,16 +14,15 @@ the Rego syntax definition file (`rego.min.js` or `rego.es.min.js`). Include it 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Highlight.js Rego Demo</title>
-  <link rel="stylesheet" href="path/to/theme.css">
-  <script type="text/javascript" src="path/to/highlight.min.js"></script>
-  <script type="text/javascript" src="path/to/rego.min.js"></script>
-  <script type="text/javascript">hljs.highlightAll();</script>
-</head>
-
-<body>
-  <pre><code class="language-rego">
+  <head>
+    <title>Highlight.js Rego Demo</title>
+    <link rel="stylesheet" href="path/to/theme.css">
+    <script type="text/javascript" src="path/to/highlight.min.js"></script>
+    <script type="text/javascript" src="path/to/rego.min.js"></script>
+    <script type="text/javascript">hljs.highlightAll();</script>
+  </head>
+  <body>
+    <pre><code class="language-rego">
 # METADATA
 # description: Your Rego policy here!
 package policy
@@ -33,10 +32,34 @@ default allow := false
 allow if {
     # ..conditions..
 }
-  </code></pre>
-</body>
-
+    </code></pre>
+  </body>
 </html>
+```
+
+or use the ES modules from a JS CDN:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highlight.js Rego Demo</title>
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+    <script type="module">
+    import hljs from 'https://unpkg.com/@highlightjs/cdn-assets@11.9.0/es/highlight.min.js';
+    import rego from 'https://unpkg.com/@styra/highlightjs-rego@0.1.0/dist/rego.es.min.js';
+    hljs.registerLanguage('rego', rego);
+    hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <pre><code class="language-rego">
+package policy
+default allow := false
+    </code></pre>
+  </body>
+</html>
+
 ```
 
 ## How to build
