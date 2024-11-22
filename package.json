@@ -8,7 +8,7 @@
     "src"
   ],
   "scripts": {
-    "publish": "./build.sh && changeset publish"
+    "publish": "./build.sh && npx changeset publish"
   },
   "repository": {
     "type": "git",
