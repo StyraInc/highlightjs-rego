@@ -21,8 +21,8 @@ jobs:
       - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
         with:
           node-version: 22
+      - run: npm ci
       - name: Create Release Pull Request or Publish to npm
-        id: changesets
         uses: StyraInc/changesets-action@aba318e9165b45b7948c60273e0b72fce0a64eb9 # v1.4.7
         with:
           publish: npm run publish
